@@ -1,0 +1,21 @@
+{
+  "manifestVersion": 2,
+  "id": "tilawa",
+  "name": "Tilawa",
+  "version": "0.2.0",
+  "icon": "icon.png",
+  "license": "MIT",
+  "repository": "https://github.com/AbdelrahmanAboegela/orca-tilawa",
+  "description": "Quran recitation for Orca: hundreds of reciters or your own files, playing while your agents work.",
+  "engines": { "orca": ">=1.4.248" },
+  "execution": "trusted-worker",
+  "pluginApi": 1,
+  "main": "worker.mjs",
+  "contributes": {
+    "panels": [{ "id": "player", "title": "Tilawa", "icon": "book", "entry": "panel.html" }],
+    "commands": [{ "id": "toggle", "title": "Tilawa: Play or pause" }],
+    "statusBarItems": [{ "id": "now", "text": "Tilawa", "icon": "play", "command": "toggle", "tooltip": "Play or pause the recitation" }],
+    "events": [{ "on": "agent.status.changed" }]
+  },
+  "capabilities": [{ "kind": "agent:read" }, { "kind": "storage:own" }]
+}
