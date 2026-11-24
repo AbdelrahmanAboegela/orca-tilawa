@@ -2,7 +2,7 @@
   "manifestVersion": 2,
   "id": "tilawa",
   "name": "Tilawa",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "icon": "icon.png",
   "license": "MIT",
   "repository": "https://github.com/AbdelrahmanAboegela/orca-tilawa",

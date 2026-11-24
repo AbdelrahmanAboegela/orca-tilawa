@@ -191,7 +191,7 @@ function viewSettings() {
     ${s.mode === 'follow' ? slider('startDelay', 'Start after', 'Wait this long once an agent starts, so quick tasks do not restart it.', s.startDelay, 0, 120, 5, 's') + slider('linger', 'Keep playing after', 'How long it keeps going once the last agent finishes.', s.linger, 0, 300, 15, 's') : ''}
   </section>
   <section class="group"><header class="gh"><span class="gi">${ic('volume')}</span><div><h3>Volume</h3><p>Playback level for every recitation.</p></div></header>
-    ${slider('volume', 'Level', '', Math.round(s.volume * 100), 0, 100, 5, '%')}
+    ${slider('volume', 'Level', '', Math.round(s.volume * 100), 0, 100, 1, '%')}
   </section>
   <section class="group"><header class="gh"><span class="gi">${ic('folder')}</span><div><h3>My files</h3><p>Choose a folder with your own recitations. They join the matching reciter, named by surah number or name, for example <i>002 Al-Baqarah Husary.mp3</i> or <i>Husary/36.mp3</i>.</p></div></header>
     <div class="row-f"><input class="text" id="folder" placeholder="C:\\Quran" aria-label="Folder path" value="${esc(s.localFolder || '')}" spellcheck="false"><button class="btn soft" data-act="scan">Scan</button></div>
